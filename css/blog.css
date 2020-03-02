@@ -1,0 +1,329 @@
+/* -------------------- CLASSES ET STYLES GENERAUX ---------------- */
+
+:root {
+  --back: #363D42;
+  --text: #ffffff;
+  --green: #5b8c85;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: no-repeat url('../img2/mountain.jpg'), rgba(54, 61, 66, 0.3);
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text);
+}
+
+main {
+  /* pour sortir le 'main' de sous le 'header'  */
+  margin-top: 300px;
+  min-height: 100vh;
+}
+
+
+/*-------------------------  MOBILE  --------------------------*/
+
+
+#slide {
+  width: 80%;
+  height: 450px;
+  border: 2px solid white;
+  margin: 200px auto 30px auto;
+  background-color: whitesmoke;
+  color: gray;
+  text-align: center;
+  line-height: 450px;
+  font-size: 40px;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+#slide img {
+  border-radius: 10px;
+}
+
+.slide {
+  width: 100%;
+  height: 450px;
+}
+
+#video {
+  display: flex;
+}
+
+.fa-pause-circle {
+  margin-left: 45%;
+  margin-right: 30px;
+}
+
+#play,
+#pause {
+  font-size: 50px;
+}
+
+#exp_blog {
+  border: 2px solid grey;
+  background-color:#fffdf9;
+  color: grey;
+  text-shadow: 0px 0px 1px rgb(77, 73, 73);
+  border-radius: 10px;
+  height: 500px;
+  width: 80%;
+  margin: 50px auto;
+}
+
+#type {
+  display: flex;
+  justify-content: center;
+}
+
+#exp_blog button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: 2px solid grey;
+  background-color: rgb(247, 231, 231);
+  border-radius: 5px;
+  outline: 0;
+}
+
+#exp_blog h1,
+#user h1 {
+  font-size: 23px;
+  margin: 19px auto;
+}
+
+#exp {
+  font-family: 'Indie Flower', cursive;
+  z-index: 1;
+}
+
+#story {
+  height: 400px;
+  overflow: scroll;
+}
+
+#story cite {
+  float: right;
+  padding: 0 20px;
+}
+
+#story h3 {
+  padding-left: 15px;
+}
+
+#story p {
+  padding-left: 10px;
+}
+
+#story_modal {
+  background-color:#fffdf9;
+  color: grey;
+  text-shadow: 0px 0px 1px rgb(77, 73, 73);
+  border: 2px solid grey;
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+  /* position: absolute; */
+  z-index: 20;
+}
+
+#story_modal cite {
+  float: right;
+  padding: 0 20px;
+}
+
+#story_modal h3 {
+  padding: 10px 10px;
+}
+
+#story_modal article {
+  margin-top: 60px;
+}
+
+#story_modal p {
+  padding: 10px;
+}
+
+.no_mobile {
+  display: none;
+}
+
+#type button.active {
+  color: white;
+  background-color: rgba(177, 16, 16, 0.4);
+  border: none;
+
+}
+
+div[data-type="family"],
+div[data-type="couple"],
+div[data-type="friends"] {
+  display: none;
+}
+
+.full_screen {
+  float: right;
+  cursor: pointer;
+  margin: 30px;
+  margin: 0 20px 30px 0;
+  border: 2px solid gray;
+  background-color: rgb(247, 231, 231);
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+#exp #story .amazing_cross {
+  float: right;
+  display: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  color: grey;
+}
+
+#user {
+  border: 2px solid grey;
+  background-color:#fffdf9;
+  color: grey;
+  text-shadow: 0px 0px 1px rgb(77, 73, 73);
+  border-radius: 10px;
+  height: 520px;
+  width: 80%;
+  margin: 50px auto;
+  z-index: 1;
+}
+
+#user h1,
+#exp_blog h1 {
+  text-align: center;
+}
+
+input {
+  margin: 10px;
+}
+
+#exp_form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+
+#exp_form section:nth-child(1) {
+  margin: 2%;
+}
+
+#exp_form section:nth-child(2) {
+  margin-top: 10px;
+}
+
+#exp_form input:nth-child(2) {
+  margin-left: 30px;
+}
+
+#exp_form input:last-of-type {
+  margin-left: 10px;
+}
+
+#exp_form input[type="text"] {
+  width: 100px;
+}
+
+
+#exp_form section:nth-child(3) {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#exp_form textarea {
+  margin-top: 50px;
+  margin: 0 auto;
+  width: 80%;
+  height: 25%;
+}
+
+::placeholder {
+  padding: 10px;
+  font-size: 15px;
+}
+
+#share {
+  width: 25%;
+  margin: 40px auto 20px auto;
+  padding: 6px 0;
+  background-color: rgb(247, 231, 231);
+  border: 2px solid grey;
+  border-radius: 5px;
+  outline: 0;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  color: grey;
+  font-weight: 700;
+}
+
+
+
+
+@media (min-width: 577px) {
+  textarea {
+    height: 60%;
+  }
+}
+
+
+
+/*-------------------------  LAPTOP & DESKTOP  --------------------------*/
+
+@media (min-width: 1125px) {
+
+  #slide {
+    width: 55%;
+  }
+
+  #exp {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+  }
+
+  .no_mobile {
+    display: block;
+  }
+
+  #exp_blog {
+    height: 500px;
+    width: 45%;
+  }
+
+  #user {
+    height: 500px;
+    width: 45%;
+  }
+
+  #exp_form textarea {
+    margin: 0 auto;
+  }
+
+
+  #exp_form input:nth-child(2) {
+    margin-left: 35px;
+  }
+
+  #exp_form input:last-of-type {
+    margin-left: 10px;
+  }
+
+  #exp_form input[type="submit"] {
+    margin: 20px 30%;
+  }
+
+}

@@ -1,0 +1,174 @@
+/* -------------------- CLASSES ET STYLES GENERAUX ---------------- */
+
+:root {
+    --back: #363D42;
+    --text: #ffffff;
+    --green: #5b8c85;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: no-repeat url('../img2/mountain.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--text);
+}
+
+main {
+    /*  pour ne pas que le 'main' se retrouve sous le 'header'   */
+    margin-top: 380px;
+    min-height: 100vh;
+}
+
+
+
+/*-------------------------  MOBILE --------------------------*/
+
+#cartes {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+#cartes div {
+    height: 100%;
+    width: 70%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+#cartes div p {
+    display: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+}
+
+#cartes div h2 {
+    margin-top: 15px;
+}
+
+.fa-caret-down {
+    margin-left: 20px;
+}
+
+#cartes div img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#cartes div button{
+    display: none;
+    color: gray;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(207, 218, 226);
+    color: rgb(89, 98, 104);
+    text-transform: uppercase;
+    font-weight: bolder;
+    outline: 0;
+}
+
+.modal_mobile,
+.modal_mobile2 {
+    display: none;
+}
+
+.modal {
+    display: none;
+    max-width: 50%;
+    border: 3px solid white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(80, 93, 102, 0.6);
+    font-family: 'Indie Flower', cursive;
+}
+
+.modal h2 {
+    margin: 25px 0px;
+}
+
+.fa-times-circle {
+    color: white;
+    float: right;
+    font-size: 25px;
+}
+
+
+#tricks_button {
+    color: gray;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(207, 218, 226);
+    color: rgb(89, 98, 104);
+    text-transform: uppercase;
+    font-weight: bolder;
+    outline: 0;
+}
+
+/*-------------------------  TABLETTE  --------------------------*/
+
+@media (min-width: 780px) {
+
+    #cartes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #cartes div {
+        height: 100%;
+        width: 45%;
+        margin: 20px auto;
+    }
+
+    .modal_mobile {
+        display: block;
+    }
+
+}
+
+
+/*-------------------------  DESKTOP  --------------------------*/
+
+@media (min-width: 1230px) {
+
+    #cartes {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #cartes div {
+        height: 15%;
+        width: 26%;
+        margin: 30px;
+    }
+
+    #cartes div p {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .modal_mobile,
+    .modal_mobile2 {
+        display: block;
+    }
+
+}

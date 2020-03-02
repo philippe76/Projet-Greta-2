@@ -1,0 +1,233 @@
+/* -------------------- CLASSES ET STYLES GENERAUX ---------------- */
+
+:root {
+    --back: #363D42;
+    --text: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--text);
+}
+
+main {
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 190px;
+    min-height: 100vh;
+}
+
+#map p {
+    float: right;
+}
+
+/*--------------------------------  MOBILE  ---------------------------------------------------------*/
+
+
+#contact {
+    padding-bottom: 120px;
+    height: 100vh;
+    border-radius: 5px;
+}
+
+#contact>div {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#contact h2 {
+    text-shadow: 1px 1px 1px gray;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 40px;
+}
+
+
+#form {
+    margin-top: 0;
+}
+
+#form input {
+    display: block;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#submit {
+    padding-left: 10px;
+    margin-top: 60px;
+    outline: 0;
+    border: none;
+    border-radius: 10px;
+    color: rgb(89, 98, 104);
+}
+
+
+#form,
+#map {
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 0 30px;
+    margin-bottom: 50px;
+}
+
+#form {
+    padding: 0 20px;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 200px;
+}
+
+
+#network {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+
+#network i {
+    font-size: 45px;
+    margin: 10px;
+    text-shadow: 1px 1px 1px gray;
+}
+
+#network i:nth-child(odd):hover {
+    font-size: 60px;
+    color: rgb(247, 231, 231);
+    animation: bounce 0.40s ease alternate;
+}
+
+
+#network i:nth-child(even):hover {
+    font-size: 60px;
+    color: rgb(247, 231, 231);
+    animation: rebounce 0.40s ease alternate;
+}
+
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes rebounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(30px);
+    }
+}
+
+
+/*--------------------------------------------- LAPTOP --------------------------------*/
+
+
+@media (min-width: 1025px) {
+
+
+    #contact {
+        padding-bottom: 20px;
+    }
+
+    #contact>div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding: 70px;
+    }
+
+
+    #form {
+        padding: 10px;
+    }
+
+    #form input {
+        width: 350px;
+        margin: 40px auto;
+    }
+
+   
+    #network i {
+        font-size: 60px;
+        margin: 20px;
+    }
+
+    #network i:nth-child(even):hover {
+        font-size: 80px;
+        animation: rebounce 0.40s ease alternate;
+    }
+    
+    
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+        }
+    
+        to {
+            transform: translateY(-40px);
+        }
+    }
+    
+    @keyframes rebounce {
+        from {
+            transform: translateY(0);
+        }
+    
+        to {
+            transform: translateY(40px);
+        }
+    }
+
+    iframe {
+        min-width: 95%;
+        max-height: 400px;
+    }
+
+}
+
+
+/*--------------------------------------------- DESKTOP  --------------------------------*/
+
+@media (min-width: 1225px) {
+
+    main {
+        margin-top: 240px;
+    }
+
+    #form input {
+        width: 450px;
+    }
+
+
+    #form #submit {
+        width: 100px;
+
+    }
+
+
+}
